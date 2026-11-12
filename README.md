@@ -9,8 +9,6 @@ C++ program that predicts a molecule's vibrational frequencies, and decides whet
 The goal is learning the [Eigen](https://libeigen.gitlab.io/eigen/docs-nightly/) library and
 some C++ habits that will save you hours of debugging.
 
-Fill in every `_____`. When a question says "try it," please compile and run it.
-
 **Setup** (run once):
 
 ```bash
