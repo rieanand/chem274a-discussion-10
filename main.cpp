@@ -1,0 +1,61 @@
+// Discussion 10: Linear algebra with Eigen
+// Build: g++ -std=c++17 -Wall -I eigen-3.4.0 main.cpp -o main
+#include <cmath>
+#include <fstream>
+#include <iostream>
+#include <map>
+#include <string>
+#include <vector>
+
+#include <Eigen/Dense>
+
+// Masses (amu) of the most abundant isotope of each element
+const std::map<std::string, double> atomic_weights = {
+    {"H", 1.007825032},
+    {"C", 12.000000000},
+    {"N", 14.003074004},
+    {"O", 15.99491462}
+};
+
+int main()
+{
+    // Coordinates in bohr
+    // O H H
+    Eigen::MatrixXd h2o{
+       {0.000000000000,  0.000000000000, -0.134503695264},
+       {0.000000000000, -1.684916670000,  1.067335684736},
+       {0.000000000000,  1.684916670000,  1.067335684736},
+    };
+
+    // C O H H
+    Eigen::MatrixXd form{
+        { 0.000025165297,  0.000000000000,  0.144571523302},
+        {-0.000038305955,  0.000000000000,  1.343510833886},
+        { 0.938708677255,  0.000000000000, -0.443151260635},
+        {-0.938658598164,  0.000000000000, -0.443084756552}
+    };
+
+    std::cout << "Water coordinates" << std::endl;
+    std::cout << h2o << std::endl << std::endl;
+
+    std::cout << "Formaldehyde coordinates" << std::endl;
+    std::cout << form << std::endl << std::endl;
+
+    // Part 1: rotations
+
+
+    // Part 2: matrix to diagonalize
+    Eigen::MatrixXd m_to_diag{
+       {1.0598335775620615, 3.492335383889711, 5.340543026017748, 1.9561942775010177, -1.7600404070220854},
+       {2.425699535950736, -1.4360656816022321, 5.184048305083849, 6.123660815734637, -0.22507001062957332},
+       {7.063614270641234, 7.931762873542391, -2.9012181331475673, -5.288561336623294, -7.421484320660808},
+       {6.68830964216975, 6.070926968181201, -7.956728299890015, -2.035647927196005, -3.8716957576608158},
+       {-3.1720523233211506, -6.564758880340895, 6.074970402979889, 2.723055735932618, 7.944873028031754}
+    };
+
+
+    // Part 3 & 4: frequencies
+
+
+    return 0;
+}
