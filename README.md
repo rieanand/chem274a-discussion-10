@@ -9,13 +9,26 @@ C++ program that predicts a molecule's vibrational frequencies, and decides whet
 The goal is learning the [Eigen](https://libeigen.gitlab.io/eigen/docs-nightly/) library and
 some C++ habits that will save you hours of debugging.
 
-**Setup** (run once):
+**Setup** (run once, downloads the Eigen library into this folder):
 
 ```bash
-curl -LO https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.bz2
-tar xjf eigen-3.4.0.tar.bz2
-g++ -std=c++17 -Wall -I eigen-3.4.0 main.cpp -o main && ./main
+make setup
 ```
+
+**Build and run:**
+
+```bash
+make run
+```
+
+`make run` compiles `main.cpp` with this command, then runs it:
+
+```bash
+g++ -std=c++17 -Wall -I eigen-3.4.0 main.cpp -o main
+```
+
+When a question asks you to change a compiler flag (like `-DNDEBUG`), type that command yourself with the flag added,
+then run `./main`.
 
 **0.1** Eigen is "header-only." Looking at the compile command, what does that mean for you?
 

@@ -1,9 +1,11 @@
 // Discussion 10: Linear algebra with Eigen
-// Build: g++ -std=c++17 -Wall -I eigen-3.4.0 main.cpp -o main
+// Build: make run   (or: g++ -std=c++17 -Wall -I eigen-3.4.0 main.cpp -o main)
+#include <chrono>
 #include <cmath>
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
