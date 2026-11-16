@@ -17,7 +17,7 @@ tar xjf eigen-3.4.0.tar.bz2
 g++ -std=c++17 -Wall -I eigen-3.4.0 main.cpp -o main && ./main
 ```
 
-**0.1** Eigen is "header-only." Looking at the compile command, what does that mean for you? `_____`
+**0.1** Eigen is "header-only." Looking at the compile command, what does that mean for you?
 
 ---
 
@@ -36,7 +36,7 @@ std::cout << rotated << "\n";
 **1.1** `Matrix3d` vs `MatrixXd`: what do the `3`, the `X`, and the `d` mean? 
 
 **1.2** Try it: `std::cout << sizeof(Eigen::Matrix3d) << " " << sizeof(Eigen::MatrixXd) << "\n";`
-Both hold 9 doubles here. Why is the `MatrixXd` object *smaller*? `_____`
+Both hold 9 doubles here. Why is the `MatrixXd` object *smaller*? 
 
 **1.3** Try it: `Eigen::MatrixXd bad = R * form;` (`form` is 4 × 3).
 Does it compile? Does it run?
