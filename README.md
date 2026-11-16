@@ -203,9 +203,4 @@ for (int k = 0; k < es.eigenvalues().size(); k++) {
 values 1167, 1249, 1500, 1746, 2783 and 2843 cm⁻¹
 ([NIST](https://webbook.nist.gov/cgi/cbook.cgi?ID=C50000&Mask=800)). Pass? 
 
-**5.6** Do any of your frequencies fall in the 800–1250 cm⁻¹ window? 
-
----
-
-**Bonus:** time the loop version vs. the `.array()` version of Exercise 4 on a 3000 × 3000 random matrix
-(`Eigen::MatrixXd::Random(3000, 3000)`) using `<chrono>`, with and without `-O2`. Which is faster? Why?
+**5.6** Do any of your frequencies fall in the 800–1250 cm⁻¹ window?
